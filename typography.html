@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio – Everett Orange</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f0f1a;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    header {
+      width: 100%;
+      padding: 20px 0;
+      background-color: #0f0f1a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo {
+      font-size: 40px;
+      font-weight: bold;
+      color: rgb(32, 206, 206);
+      text-align: center;
+    }
+
+    .logo span {
+      color: #f75990;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      font-size: 18px;
+      padding: 8px 12px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #49d5ff;
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 36px;
+      color: #49d5ff;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px 30px;
+      padding: 40px;
+      max-width: 1200px;
+      width: 100%;
+      align-items: start;
+    }
+
+    .image-box {
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 2px solid #49d5ff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .image-box:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 25px #f75990;
+      border-color: #f75990;
+    }
+
+    .image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    .caption {
+      text-align: center;
+      font-size: 16px;
+      color: #ccc;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: auto;
+      background-color: #0f0f1a;
+      color: #aaa;
+    }
+
+    #img-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    #img-modal img {
+      max-width: 90%;
+      max-height: 90%;
+      border: 3px solid #49d5ff;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #f75990;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">EVERETT <span>ORANGE</span></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <h1>Typography</h1>
+
+  <div class="grid">
+    <div>
+      <div class="image-box">
+        <img class="expandable" src="imagesall/typo/ery.png" alt="Artwork 1" />
+      </div>
+      <div class="caption">Symetry book design</div>
+    </div>
+
+    <div>
+      <div class="image-box">
+        <img class="expandable" src="imagesall/typo/her.png" alt="Artwork 2" />
+      </div>
+      <div class="caption">Ad Poster</div>
+    </div>
+
+    <div>
+      <div class="image-box">
+        <img class="expandable" src="imagesall/typo/plk.png" alt="Artwork 3" />
+      </div>
+      <div class="caption">Asymetry book design</div>
+    </div>
+
+    <div>
+      <div class="image-box">
+        <img class="expandable" src="imagesall/typo/son.png" alt="Artwork 4" />
+      </div>
+      <div class="caption">Typography class project</div>
+    </div>
+
+    <div>
+      <div class="image-box">
+        <img class="expandable" src="imagesall/typo/d1.png"Artwork 5" />
+      </div>
+      <div class="caption">Typography class project</div>
+    </div>
+
+    <div>
+      <div class="image-box">
+        <img class="expandable" src="imagesall/typo/d2.png" alt="Artwork 6" />
+      </div>
+      <div class="caption">Typography class project</div>
+    </div>
+
+    <div>
+      <div class="image-box">
+        <img class="expandable" src="imagesall/typo/d3.png" alt="Artwork 4" />
+      </div>
+      <div class="caption">Typography class project</div>
+    </div>
+
+    <div>
+      <div class="image-box">
+        <img class="expandable" src="imagesall/typo/d4.png"Artwork 5" />
+      </div>
+      <div class="caption">Typography class project</div>
+    </div>
+
+    <div>
+      <div class="image-box">
+        <img class="expandable" src="imagesall/typo/d5.png" alt="Artwork 6" />
+      </div>
+      <div class="caption">Typography class project</div>
+    </div>
+
+     <div>
+      <div class="image-box">
+        <img class="expandable" src="imagesall/typo/d6.png" alt="Artwork 4" />
+      </div>
+      <div class="caption">Typography class project</div>
+    </div>
+
+    <div>
+      <div class="image-box">
+        <img class="expandable" src="imagesall/typo/d7.png"Artwork 5" />
+      </div>
+      <div class="caption">Typography class project</div>
+    </div>
+
+    <div>
+      <div class="image-box">
+        <img class="expandable" src="imagesall/typo/d8.png" alt="Artwork 6" />
+      </div>
+      <div class="caption">Typography class project</div>
+    </div>
+
+    
+     <div>
+      <div class="image-box">
+        <img class="expandable" src="imagesall/typo/d9.png" alt="Artwork 4" />
+      </div>
+      <div class="caption">Typography class project</div>
+    </div>
+
+    <div>
+      <div class="image-box">
+        <img class="expandable" src="imagesall/typo/d10.png"Artwork 5" />
+      </div>
+      <div class="caption">Typography class project</div>
+    </div>
+
+    <div>
+      <div class="image-box">
+        <img class="expandable" src="imagesall/typo/d11.png" alt="Artwork 6" />
+      </div>
+      <div class="caption">Typography class project</div>
+    </div>
+
+    <div>
+      <div class="image-box">
+        <img class="expandable" src="imagesall/typo/d12.png" alt="Artwork 4" />
+      </div>
+      <div class="caption">Typography class project</div>
+    </div>
+
+    <div>
+      <div class="image-box">
+        <img class="expandable" src="imagesall/typo/d13.png"Artwork 5" />
+      </div>
+      <div class="caption">Typography class project</div>
+    </div>
+
+    <div>
+      <div class="image-box">
+        <img class="expandable" src="imagesall/typo/d14.png" alt="Artwork 6" />
+      </div>
+      <div class="caption">Typography class project</div>
+    </div>
+
+     <div>
+      <div class="image-box">
+        <img class="expandable" src="imagesall/typo/d15.png"Artwork 5" />
+      </div>
+      <div class="caption">Typography class project</div>
+    </div>
+
+    <div>
+      <div class="image-box">
+        <img class="expandable" src="imagesall/typo/d16.png" alt="Artwork 6" />
+      </div>
+      <div class="caption">Typography class project</div>
+    </div>
+  </div>
+
+  
+
+  
+
+  <div id="img-modal" onclick="this.style.display='none'">
+    <img src="" alt="Fullscreen Image" />
+  </div>
+
+  <footer>
+    &copy; 2025 Everett Orange | Designed by Everett
+  </footer>
+
+  <script>
+    const modal = document.getElementById('img-modal');
+    const modalImg = modal.querySelector('img');
+
+    document.querySelectorAll('.expandable').forEach(img => {
+      img.addEventListener('dblclick', () => {
+        modal.style.display = 'flex';
+        modalImg.src = img.src;
+        modalImg.alt = img.alt;
+      });
+    });
+
+    modal.addEventListener('dblclick', () => {
+      modal.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
