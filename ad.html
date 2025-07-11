@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio – Everett Orange</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f0f1a;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    header {
+      width: 100%;
+      padding: 20px 0;
+      background-color: #0f0f1a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo {
+      font-size: 40px;
+      font-weight: bold;
+      color: rgb(32, 206, 206);
+      text-align: center;
+    }
+
+    .logo span {
+      color: #f75990;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      font-size: 18px;
+      padding: 8px 12px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #49d5ff;
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 36px;
+      color: #49d5ff;
+      text-align: center;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      padding: 40px;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    .video-box {
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 2px solid #49d5ff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      aspect-ratio: 1 / 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .video-box:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 25px #f75990;
+      border-color: #f75990;
+    }
+
+    .video-box video,
+    .video-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      flex: 1;
+      cursor: pointer;
+    }
+
+    .caption {
+      padding: 10px;
+      text-align: center;
+      background-color: #1c1c2b;
+      font-size: 16px;
+      color: #ccc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: auto;
+      background-color: #0f0f1a;
+      color: #aaa;
+    }
+
+    /* Modal Fullscreen Image Styles */
+    #img-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    #img-modal img {
+      max-width: 90%;
+      max-height: 90%;
+      border: 3px solid #49d5ff;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #f75990;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">EVERETT <span>ORANGE</span></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <h1>Ad Campaign</h1>
+
+  <div class="video-grid">
+    <!-- Top Row – Videos -->
+    <div class="video-box">
+      <video controls src=""></video>
+      <div class="caption">Accommodation Letter Request Form</div>
+    </div>
+    <div class="video-box">
+      <video controls src=""></video>
+      <div class="caption">College 2 Careers</div>
+    </div>
+    <div class="video-box">
+      <video controls src=""></video>
+      <div class="caption">ASSIST Mentoring Cohort</div>
+    </div>
+    <div class="video-box">
+      <video controls src=""></video>
+      <div class="caption">Testing Process</div>
+    </div><div class="video-box">
+      <video controls src=""></video>
+      <div class="caption">Assistive Technology</div>
+    </div>
+    <div class="video-box">
+      <video controls src=""></video>
+      <div class="caption">Product Promo – Glow Bottle</div>
+    </div>
+
+
+    
+    <!-- Bottom Row – Still Images (Expandable) -->
+    <div class="video-box">
+      <img class="expandable" src="images/adca.jpg" alt="Artwork 1" />
+      <div class="caption">Design Theory</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="imagesall/ad campaign/1.png" alt="Artwork 2" />
+      <div class="caption">3D Scene Render – Concept Space</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="imagesall/ad campaign/3.png" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="imagesall/ad campaign/4.png" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="imagesall/ad campaign/5.png" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="imagesall/ad campaign/6.png" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+     <div class="video-box">
+      <img class="expandable" src="imagesall/ad campaign/7.png" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="imagesall/ad campaign/8.png" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="imagesall/ad campaign/2.png" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+     <div class="video-box">
+      <img class="expandable" src="imagesall/ad campaign/10.png" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="imagesall/ad campaign/11.png" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="imagesall/ad campaign/12.png" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+     <div class="video-box">
+      <img class="expandable" src="imagesall/ad campaign/13.png" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="imagesall/ad campaign/14.png" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="imagesall/ad campaign/15.png" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+     <div class="video-box">
+      <img class="expandable" src="imagesall/ad campaign/9.png" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="imagesall/ad campaign/17.png" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="imagesall/ad campaign/18.png" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+     <div class="video-box">
+      <img class="expandable" src="imagesall/ad campaign/19.png" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="imagesall/ad campaign/20.png" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="imagesall/ad campaign/21.png" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+     <div class="video-box">
+      <img class="expandable" src="imagesall/ad campaign/22.png" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="imagesall/ad campaign/16.png" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="imagesall/ad campaign/27.png" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+     <div class="video-box">
+      <img class="expandable" src="imagesall/ad campaign/26.png" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="imagesall/ad campaign/25.png" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="imagesall/ad campaign/24.png" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+     <div class="video-box">
+      <img class="expandable" src="imagesall/ad campaign/29.png" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="imagesall/ad campaign/28.png" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="imagesall/ad campaign/23.png" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+     <div class="video-box">
+      <img class="expandable" src="images/gallery3.jpg" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="images/gallery3.jpg" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="images/gallery3.jpg" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+     <div class="video-box">
+      <img class="expandable" src="images/gallery3.jpg" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="images/gallery3.jpg" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="images/gallery3.jpg" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+     <div class="video-box">
+      <img class="expandable" src="images/gallery3.jpg" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="images/gallery3.jpg" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="images/gallery3.jpg" alt="Artwork 3" />
+      <div class="caption">Poster Design – Live Event Promo</div>
+    </div>
+  </div>
+
+  <!-- Modal Container -->
+  <div id="img-modal" onclick="this.style.display='none'">
+    <img src="" alt="Fullscreen Image" />
+  </div>
+
+  <footer>
+    &copy; 2025 Everett Orange | Designed by Everett
+  </footer>
+
+  <script>
+    const modal = document.getElementById('img-modal');
+    const modalImg = modal.querySelector('img');
+
+    document.querySelectorAll('.expandable').forEach(img => {
+      img.addEventListener('dblclick', () => {
+        modal.style.display = 'flex';
+        modalImg.src = img.src;
+        modalImg.alt = img.alt;
+      });
+    });
+
+    // Close on second double click
+    modal.addEventListener('dblclick', () => {
+      modal.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
