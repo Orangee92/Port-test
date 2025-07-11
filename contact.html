@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact – Everett Orange</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f0f1a;
+      color: white;
+    }
+
+    header {
+      background-color: #0f0f1a;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 80px;
+      font-weight: bold;
+      color: rgb(32, 206, 206);
+    }
+
+    .logo span {
+      color: #f75990;
+    }
+
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      font-size: 26px;
+      padding: 10px 15px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #f75990;
+      text-shadow: 0 0 8px #f75990;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 100px auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      color: #49d5ff;
+    }
+
+    p {
+      font-size: 20px;
+      margin-bottom: 40px;
+      color: #ccc;
+    }
+
+    .email-highlight {
+      color: orange;
+      font-weight: bold;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    input, textarea {
+      padding: 15px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      background-color: #1c1c2b;
+      color: white;
+      outline: none;
+      box-shadow: 0 0 0 transparent;
+      transition: 0.3s;
+    }
+
+    input:focus, textarea:focus {
+      box-shadow: 0 0 10px #f75990;
+      border: 2px solid #f75990;
+    }
+
+    button {
+      padding: 15px;
+      font-size: 20px;
+      border: none;
+      border-radius: 10px;
+      background-color: #f75990;
+      color: #0f0f1a;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #fff;
+      color: #f75990;
+      box-shadow: 0 0 15px #f75990;
+    }
+
+    .back-home {
+      display: inline-block;
+      margin-top: 40px;
+      font-size: 18px;
+      color: #49d5ff;
+      text-decoration: none;
+    }
+
+    .back-home:hover {
+      color: #f75990;
+      text-shadow: 0 0 10px #f75990;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #888;
+      background-color: #0f0f1a;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hover Sound -->
+  <audio id="hover-sound" src="sounds/clicky.mp3" preload="auto"></audio>
+
+  <header>
+    <div class="logo">EVERETT <span>ORANGE</span></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Contact Me</h1>
+    <p>
+      Have a project, question, or idea? I’d love to hear from you.<br>
+      Reach out anytime at 
+      <span class="email-highlight">orangeeverett@yahoo.com</span>.
+    </p>
+
+    <form action="https://formspree.io/f/xqabkvrr" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <a href="index.html" class="back-home">← Back to Home</a>
+  </main>
+
+  <footer>
+    &copy; 2025 Everett Orange | Designed by Everett
+  </footer>
+
+  <script>
+    const hoverSound = document.getElementById("hover-sound");
+    const hoverables = document.querySelectorAll("a, button");
+
+    hoverables.forEach(el => {
+      el.addEventListener("mouseenter", () => {
+        hoverSound.currentTime = 0;
+        hoverSound.play();
+      });
+    });
+  </script>
+</body>
+</html>
