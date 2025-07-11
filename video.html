@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio – Everett Orange</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f0f1a;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    header {
+      width: 100%;
+      padding: 20px 0;
+      background-color: #0f0f1a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo {
+      font-size: 40px;
+      font-weight: bold;
+      color: rgb(32, 206, 206);
+      text-align: center;
+    }
+
+    .logo span {
+      color: #f75990;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      font-size: 18px;
+      padding: 8px 12px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #49d5ff;
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 36px;
+      color: #49d5ff;
+      text-align: center;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      padding: 40px;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    .video-box {
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 2px solid #49d5ff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      aspect-ratio: 1 / 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .video-box:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 25px #f75990;
+      border-color: #f75990;
+    }
+
+    .video-box video,
+    .video-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      flex: 1;
+      cursor: pointer;
+    }
+
+    .caption {
+      padding: 10px;
+      text-align: center;
+      background-color: #1c1c2b;
+      font-size: 16px;
+      color: #ccc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: auto;
+      background-color: #0f0f1a;
+      color: #aaa;
+    }
+
+    /* Modal Fullscreen Image Styles */
+    #img-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    #img-modal img {
+      max-width: 90%;
+      max-height: 90%;
+      border: 3px solid #49d5ff;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #f75990;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">EVERETT <span>ORANGE</span></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <h1>Commercial Production Videos</h1>
+
+  <div class="video-grid">
+    <!-- Top Row – Videos -->
+    <div class="video-box">
+      <video controls src="imagesall/video/xbox.mp4"></video>
+      <div class="caption">XBOX ad I created using After Effects</div>
+    </div>
+    <div class="video-box">
+      <video controls src="imagesall/video/animal.mp4"></video>
+      <div class="caption">Animal Planet ad I created using After Effects</div>
+    </div>
+    <div class="video-box">
+      <video controls src="imagesall/video/Festival Promo_Everett Orange.mp4"></video>
+      <div class="caption">Music Festival</div>
+    </div>
+    <div class="video-box">
+      <video controls src="imagesall/video/Assignment 2 25s_Orange.mp4"></video>
+      <div class="caption">NISSAN 4 of July Event</div>
+    </div><div class="video-box">
+      <video controls src="imagesall/video/Assignment 1 15s_Orange.mp4.mp4"></video>
+      <div class="caption"> Pre-roll ad. Final deliverable 1 </div>
+    </div>
+    <div class="video-box">
+      <video controls src="imagesall/video/Assignment 1 6s_Orange.mp4.mp4"></video>
+      <div class="caption"> Pre-roll ad. Final deliverable 2</div>
+    </div>
+     <div class="video-box">
+      <video controls src="imagesall/video/Assignment 3_Orange.mp4"></video>
+      <div class="caption">Created a 60-second movie trailer from a scene of Jurassic Park </div>
+    </div>
+     <div class="video-box">
+      <video controls src="imagesall/video/Comd1.mp4"></video>
+      <div class="caption">Creates idents using the COMD logo </div>
+    </div>
+     <div class="video-box">
+      <video controls src="imagesall/video/Comd2.mp4"></video>
+      <div class="caption">Creates idents using the COMD logo</div>
+    </div>
+     <div class="video-box">
+      <video controls src="imagesall/video/Comd3.mp4"></video>
+      <div class="caption">Creates idents using the COMD logo</div>
+    </div>
+     <div class="video-box">
+      <video controls src="imagesall/video/Derek Gore_Everett.mp4"></video>
+      <div class="caption">Lower Thirds</div>
+    </div>
+     <div class="video-box">
+      <video controls src="imagesall/video/wicked.mp4"></video>
+      <div class="caption">Product Promo – Glow Bottle</div>
+    </div>
+     <div class="video-box">
+      <video controls src="imagesall/video/Wicked Ice Cream.mp4"></video>
+      <div class="caption">Product Promo – Glow Bottle</div>
+    </div>
+     <div class="video-box">
+      <video controls src="imagesall/video/bestbuy.mp4"></video>
+      <div class="caption">Best Buy Sale Electronics Commercial</div>
+    </div>
+     <div class="video-box">
+      <video controls src="imagesall/video/Adobe After Effects 2025 - C__Users_orang_Desktop ... rcials_Project 1COMD Logo Layers_5_newxbox_Untitled Project8_10.35min.aep _ 2025-06-13 11-22-33.mp4"></video>
+      <div class="caption">XBOX blueprint in After Effects</div>
+    </div>
+    
+
+<h1>Video Creation Process</h1>
+    
+    <!-- Bottom Row – Still Images (Expandable) -->
+    <div class="video-box">
+      <img class="expandable" src="imagesall/video/derek.png" alt="Artwork 1" />
+      <div class="caption">Lower Thirds workflow</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="imagesall/video/fest.png" alt="Artwork 2" />
+      <div class="caption">Music Festival Workflow</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="imagesall/video/ice.png" alt="Artwork 3" />
+      <div class="caption">Dunkin Donuts Promo</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="imagesall/video/jur.png" alt="Artwork 3" />
+      <div class="caption">Jurassic Park workflow</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="imagesall/video/bes.png" alt="Artwork 3" />
+      <div class="caption">Best Buy workflow</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="imagesall/video/Assignment 2 - Direct Response Nissan Sales Event - File Explorer 6_13_2025 10_55_41 AM.png" alt="Artwork 3" />
+      <div class="caption">Blending TEXT into brick background</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="imagesall/video/x.png" alt="Artwork 3" />
+      <div class="caption">XBOX workflow</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="imagesall/video/xx.png" alt="Artwork 3" />
+      <div class="caption">XBOX workflow</div>
+    </div>
+    <div class="video-box">
+      <img class="expandable" src="imagesall/video/ac.png" alt="Artwork 3" />
+      <div class="caption">Animal Planet workflow</div>
+    </div>
+  </div>
+
+  <!-- Modal Container -->
+  <div id="img-modal" onclick="this.style.display='none'">
+    <img src="" alt="Fullscreen Image" />
+  </div>
+
+  <footer>
+    &copy; 2025 Everett Orange | Designed by Everett
+  </footer>
+
+  <script>
+    const modal = document.getElementById('img-modal');
+    const modalImg = modal.querySelector('img');
+
+    document.querySelectorAll('.expandable').forEach(img => {
+      img.addEventListener('dblclick', () => {
+        modal.style.display = 'flex';
+        modalImg.src = img.src;
+        modalImg.alt = img.alt;
+      });
+    });
+
+    // Close on second double click
+    modal.addEventListener('dblclick', () => {
+      modal.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
