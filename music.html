@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Everett Orange – Music Gallery</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f0f1a;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      background-color: #0f0f1a;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 40px;
+      font-weight: bold;
+      color: rgb(32, 206, 206);
+    }
+
+    .logo span {
+      color: #f75990;
+    }
+
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      font-size: 18px;
+      padding: 8px 12px;
+    }
+
+    nav a:hover {
+      color: #49d5ff;
+    }
+
+    h1 {
+      margin: 40px 0 10px;
+      font-size: 36px;
+      color: #49d5ff;
+      text-align: center;
+    }
+
+    .music-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 40px;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .music-box {
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px;
+      border: 2px solid #49d5ff;
+      padding: 20px;
+      transition: 0.3s ease;
+      box-shadow: 0 0 0 transparent;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      backdrop-filter: none;
+    }
+
+    .music-box:hover {
+      border-color: #f75990;
+      box-shadow: 0 0 25px #f75990;
+    }
+
+    audio {
+      width: 100%;
+      margin-bottom: 10px;
+      z-index: 1;
+    }
+
+    .music-caption {
+      font-size: 16px;
+      text-align: center;
+      color: #fff;
+      background: rgba(15, 15, 26, 0.8);
+      padding: 8px;
+      border-radius: 8px;
+      margin-top: 50px;
+      text-shadow: 0 0 4px #000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #0f0f1a;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">EVERETT <span>ORANGE</span></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <h1>My Music I Made using Suno Software</h1>
+
+  <div class="music-grid">
+    <div class="music-box" style="background-image: url('images/ort.png');">
+      <audio controls src="sounds/Circuit of Snow.mp3"></audio>
+      <div class="music-caption">Track 1 – Circuit of Snow</div>
+    </div>
+    <div class="music-box" style="background-image: url('imagesall/music/musicpics/skel.png');">
+      <audio controls src="imagesall/music/Graveyard Fighter.mp3"></audio>
+      <div class="music-caption">Track 2 – Graveyard Fighter</div>
+    </div>
+    <div class="music-box" style="background-image: url('imagesall/music/musicpics/mag.png');">
+      <audio controls src="imagesall/music/Moonlit Magic.mp3"></audio>
+      <div class="music-caption">Track 3 – Moonlit Magic</div>
+    </div>
+    <div class="music-box" style="background-image: url('imagesall/music/musicpics/cupid.png');">
+      <audio controls src="imagesall/music/Fly With Wings On.mp3"></audio>
+      <div class="music-caption">Track 4 – Fly With Wings On</div>
+    </div>
+    <div class="music-box" style="background-image: url('imagesall/music/musicpics/gor.png');">
+      <audio controls src="imagesall/music/My Apocalypse.mp3"></audio>
+      <div class="music-caption">Track 5 – My Apocalypse</div>
+    </div>
+    <div class="music-box" style="background-image: url('imagesall/music/musicpics/sis.png');">
+      <audio controls src="imagesall/music/Whispering Shadows.mp3"></audio>
+      <div class="music-caption">Track 6 – Whispering Shadows</div>
+    </div>
+     <div class="music-box" style="background-image: url('imagesall/music/musicpics/breaker.png');">
+      <audio controls src="imagesall/music/Heartbreaker Spin.mp3"></audio>
+      <div class="music-caption">Track 7– Heartbreaker Spin</div>
+    </div>
+     <div class="music-box" style="background-image: url('imagesall/music/musicpics/country.png');">
+      <audio controls src="imagesall/music/Match Makers Race.mp3"></audio>
+      <div class="music-caption">Track 8– Match Makers Race</div>
+    </div>
+     <div class="music-box" style="background-image: url('imagesall/music/musicpics/jungle.png');">
+      <audio controls src="imagesall/music/Battle in the Jungle.mp3"></audio>
+      <div class="music-caption">Track 9– Battle in the Jungle</div>
+    </div>
+     <div class="music-box" style="background-image: url('imagesall/music/musicpics/rex.png')">
+      <audio controls src="imagesall/music/Battle in the Jungle remix.mp3"></audio>
+      <div class="music-caption">Track 10 Battle in the Jungle remix</div>
+    </div>
+     <div class="music-box" style="background-image: url('imagesall/music/musicpics/king.png')">
+      <audio controls src="imagesall/music/King is Alive.mp3"></audio>
+      <div class="music-caption">Track 11 King is Alive</div>
+    </div>
+     <div class="music-box" style="background-image: url('imagesall/music/musicpics/king2.png')">
+      <audio controls src="imagesall/music/cin.mp3"></audio>
+      <div class="music-caption">Track 12 King is Alive Vol. 2</div>
+    </div>
+     <div class="music-box" style="background-image: url('imagesall/music/musicpics/king3.png')">
+      <audio controls src="imagesall/music/cin2.mp3"></audio>
+      <div class="music-caption">Track 13 King is Alive Vol. 3</div>
+    </div>
+     <div class="music-box" style="background-image: url('images/music/fade.jpg');">
+      <audio controls src="music/track6.mp3"></audio>
+      <div class="music-caption">Track 14 Fade Into Code</div>
+    </div>
+     <div class="music-box" style="background-image: url('images/music/fade.jpg');">
+      <audio controls src="music/track6.mp3"></audio>
+      <div class="music-caption">Track 15 Fade Into Code</div>
+    </div>
+     <div class="music-box" style="background-image: url('images/music/fade.jpg');">
+      <audio controls src="music/track6.mp3"></audio>
+      <div class="music-caption">Track 16– Fade Into Code</div>
+    </div>
+     <div class="music-box" style="background-image: url('images/music/fade.jpg');">
+      <audio controls src="music/track6.mp3"></audio>
+      <div class="music-caption">Track 6 – Fade Into Code</div>
+    </div>
+     <div class="music-box" style="background-image: url('images/music/fade.jpg');">
+      <audio controls src="music/track6.mp3"></audio>
+      <div class="music-caption">Track 6 – Fade Into Code</div>
+    </div>
+     <div class="music-box" style="background-image: url('images/music/fade.jpg');">
+      <audio controls src="music/track6.mp3"></audio>
+      <div class="music-caption">Track 6 – Fade Into Code</div>
+    </div>
+     <div class="music-box" style="background-image: url('images/music/fade.jpg');">
+      <audio controls src="music/track6.mp3"></audio>
+      <div class="music-caption">Track 6 – Fade Into Code</div>
+    </div>
+     <div class="music-box" style="background-image: url('images/music/fade.jpg');">
+      <audio controls src="music/track6.mp3"></audio>
+      <div class="music-caption">Track 6 – Fade Into Code</div>
+    </div>
+     <div class="music-box" style="background-image: url('images/music/fade.jpg');">
+      <audio controls src="music/track6.mp3"></audio>
+      <div class="music-caption">Track 6 – Fade Into Code</div>
+    </div>
+     <div class="music-box" style="background-image: url('images/music/fade.jpg');">
+      <audio controls src="music/track6.mp3"></audio>
+      <div class="music-caption">Track 6 – Fade Into Code</div>
+    </div>
+     <div class="music-box" style="background-image: url('images/music/fade.jpg');">
+      <audio controls src="music/track6.mp3"></audio>
+      <div class="music-caption">Track 6 – Fade Into Code</div>
+    </div>
+     <div class="music-box" style="background-image: url('images/music/fade.jpg');">
+      <audio controls src="music/track6.mp3"></audio>
+      <div class="music-caption">Track 6 – Fade Into Code</div>
+    </div>
+     <div class="music-box" style="background-image: url('images/music/fade.jpg');">
+      <audio controls src="music/track6.mp3"></audio>
+      <div class="music-caption">Track 6 – Fade Into Code</div>
+    </div>
+     <div class="music-box" style="background-image: url('images/music/fade.jpg');">
+      <audio controls src="music/track6.mp3"></audio>
+      <div class="music-caption">Track 6 – Fade Into Code</div>
+    </div>
+     <div class="music-box" style="background-image: url('images/music/fade.jpg');">
+      <audio controls src="music/track6.mp3"></audio>
+      <div class="music-caption">Track 6 – Fade Into Code</div>
+    </div>
+     <div class="music-box" style="background-image: url('images/music/fade.jpg');">
+      <audio controls src="music/track6.mp3"></audio>
+      <div class="music-caption">Track 6 – Fade Into Code</div>
+    </div>
+     <div class="music-box" style="background-image: url('images/music/fade.jpg');">
+      <audio controls src="music/track6.mp3"></audio>
+      <div class="music-caption">Track 6 – Fade Into Code</div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Everett Orange | Designed by Everett
+  </footer>
+</body>
+</html>
